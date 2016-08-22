@@ -1,0 +1,25 @@
+/* +++++++++++++  FONTS ++++++++++++++ */
+
+@font-face {
+	font-family: 'DINXlight';
+	src:  url('../scss/fonts/PFDinDisplayPro-XThin.woff2') format('woff2'),
+	url('../scss/fonts/PFDinDisplayPro-XThin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'DINlight';
+	src:  url('../scss/fonts/PFDinDisplayPro-Light.woff2') format('woff2'),
+	url('../scss/fonts/PFDinDisplayPro-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'DINreg';
+	src:  url('../scss/fonts/PFDinDisplayPro-Reg.woff2') format('woff2'),
+	url('../scss/fonts/PFDinDisplayPro-Reg.woff') format('woff');
+}
+
+body{
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

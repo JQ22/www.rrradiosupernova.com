@@ -1,0 +1,33 @@
+{
+  "name": "nexus-ui",
+  "version": "0.1.2",
+  "authors": [
+    "Peak Nexus <peaknexus.com>"
+  ],
+  "description": "Nexus-UI library generator",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.0.0",
+    "motion-ui": "~1.1.0",
+    "jquery": "~2.2.0"
+  },
+  "private": true,
+  "homepage": "https://github.com/peaknexus/Nexus-UI",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "0364529964d19f056176532a83910ae5c8e5b6cc"
+  },
+  "_source": "https://github.com/peaknexus/Nexus-UI.git",
+  "_target": "^0.1.2",
+  "_originalSource": "nexus-ui"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "nexus-ui",
+  "version": "0.1.0",
+  "authors": [
+    "Peak Nexus <peaknexus.com>"
+  ],
+  "description": "Nexus-UI library generator",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.0.0",
+    "motion-ui": "~1.1.0",
+    "jquery": "~2.2.0"
+  },
+  "private": true
+}

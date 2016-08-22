@@ -1,0 +1,29 @@
+{
+  "name": "rrradiosupernova",
+  "authors": [
+    "jquiqueret <jordan.quiqueret@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.2.1",
+    "soundcloud-audio": "^1.0.3"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.3",
+    "handlebars": "^4.0.5",
+    "three.js": "threejs#*",
+    "nexus-ui": "^0.1.2",
+    "tone": "*"
+  }
+}

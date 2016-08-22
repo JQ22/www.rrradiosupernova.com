@@ -1,0 +1,32 @@
+//TODO
+/*
+- Move all possible settings to nexus-settings
+- Animations
+	- Menus opens
+	- Menus items when menu opens
+	- Sliding switches
+
+- Components
+	- Buttons
+		- Arrow
+		- Hover
+	- Forms
+		- Select Boxes
+		- Checkboxes
+		- Radio
+- Colors
+-  
+*/
+
+
+//all inclusive
+@import "nexus/nexus-global";
+
+
+@mixin nexus-everything{
+	@include nexus-global;
+	@include nexus-dropdown-menu;
+	@include nexus-forms;
+	@include nexus-top-bar;
+	@include nexus-off-canvas;
+}

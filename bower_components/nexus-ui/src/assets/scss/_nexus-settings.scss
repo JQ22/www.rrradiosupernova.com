@@ -1,0 +1,159 @@
+//settings to override for foundations settings and also the nexus components
+
+//	1. Global Overrides
+//	1.1 Global Addons
+//   2. Breakpoints
+//   3. The Grid
+//   4. Base Typography
+//   5. Typography Helpers
+//   6. Abide
+//   7. Accordion
+//   8. Accordion Menu
+//   9. Badge
+//  10. Breadcrumbs
+//  11. Button
+//  12. Button Group
+//  13. Callout
+//  14. Close Button
+//  15. Drilldown
+//  16. Dropdown
+//  17. Dropdown Menu
+//  18. Flex Video
+//  19. Forms
+//  20. Label
+//  21. Media Object
+//  22. Menu
+//  23. Off-canvas
+//  24. Orbit
+//  25. Pagination
+//  26. Progress Bar
+//  27. Reveal
+//  28. Slider
+//  29. Switch
+//  30. Table
+//  31. Tabs
+//  32. Thumbnail
+//  33. Tooltip
+//  34. Top Bar
+
+
+//1. Global Overrides
+//-------------
+$primary-color: #009688;
+$secondary-color: #FF5722;
+$light-gray: #EEEEEE;
+$medium-gray: #9E9E9E;
+$dark-gray: #212121;
+
+//1.1 Global Addons
+//-------------
+
+$primary-color-material-50: #E0F2F1;
+$primary-color-material-100: #B2DFDB;
+$primary-color-material-200: #80CBC4;
+$primary-color-material-300: #4DB6AC;
+$primary-color-material-400: #26A69A;
+$primary-color-material-500: $primary-color;
+$primary-color-material-600: #00897B;
+$primary-color-material-700: #00796B;
+$primary-color-material-800: #00695C;
+$primary-color-material-900: #004D40;
+$primary-color-material-a100: #A7FFEB;
+$primary-color-material-a200: #64FFDA;
+$primary-color-material-a400: #1DE9B6;
+$primary-color-material-a700: #00BFA5;
+
+
+$secondary-color-material-50: #FBE9E7;
+$secondary-color-material-100: #FFCCBC;
+$secondary-color-material-200: #FFAB91;
+$secondary-color-material-300: #FF8A65;
+$secondary-color-material-400: #FF7043;
+$secondary-color-material-500: $secondary-color;
+$secondary-color-material-600: #F4511E;
+$secondary-color-material-700: #E64A19;
+$secondary-color-material-800: #D84315;
+$secondary-color-material-900: #BF360C;
+$secondary-color-material-a100: #FF9E80;
+$secondary-color-material-a200: #FF6E40;
+$secondary-color-material-a400: #FF3D00;
+$secondary-color-material-a700: #DD2C00;
+
+
+$gray-color-material-50: #FAFAFA;
+$gray-color-material-100: #F5F5F5;
+$gray-color-material-200: $light-gray;
+$gray-color-material-300: #E0E0E0;
+$gray-color-material-400: #BDBDBD;
+$gray-color-material-500: $medium-gray;
+$gray-color-material-600: #757575;
+$gray-color-material-700: #616161;
+$gray-color-material-800: #424242;
+$gray-color-material-900: $dark-gray;
+
+//--------
+
+$global-font-size: 100%;
+$global-lineheight: 1.5;
+$success-color: #00BFA5;
+$warning-color: #ffae00;
+$alert-color: $secondary-color-material-a700;
+$black: $dark-gray;
+$white: $gray-color-material-50;
+$background-clear: transparent;
+$body-background: $gray-color-material-50;
+$body-font-color: $black;
+$body-font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-spacing: .5px;
+$global-radius: 3px;
+$anchor-color: $primary-color-material-50;
+$anchor-color-hover: $anchor-color; //scale-color($anchor-color, $lightness: -14%);
+$breakpoint-classes: (small medium large xlarge);
+$global-icon-font-size: 1.5rem;
+$rem-base: 12px;
+$content-height: 100vh;
+$content-background-color: $primary-color-material-50;
+$transition-duration-fast: .15s;
+$fade-in-duration: $transition-duration-fast;
+$fade-out-duration: $transition-duration-fast;
+
+//17. Dropdown Menu
+$dropdownmenu-dark-color: $primary-color-material-500;
+$dropdownmenu-arrows: true;
+$dropdownmenu-background: $dropdownmenu-dark-color;
+$dropdownmenu-arrow-color: $dropdownmenu-dark-color;
+$dropdown-border: 0px solid $dropdownmenu-dark-color;
+$dropdown-menu-card-level: 1;
+$dropdown-menu-cards: true;
+$dropdown-menu-minwidth: 250px;
+
+//19. Forms
+$input-color: $primary-color-material-50;
+$input-background: $background-clear;
+$input-background-focus: $background-clear;
+$input-border: 0px;
+$input-border-width: 0px 0px 2px 0px;
+$input-border-style: solid;
+$input-border-color: $primary-color-material-50;
+$input-border-width-focus: $input-border-width;
+$input-border-style-focus: $input-border-style;
+$input-border-color-focus: $primary-color-material-900;
+$input-radius: 0px;
+$input-shadow: none;
+$input-shadow-focus: none;
+$input-transition: all 0.25s ease-in-out;
+
+//22. Menu
+$menu-item-padding: .5rem 1.3rem;
+$menu-icon-spacing: 0rem;
+
+//34. Top-Bar
+$topbar-background: $primary-color;
+$topbar-color: $primary-color-material-50;
+$topbar-padding: 0rem;
+$topbar-font-size: .9rem;
+$topbar-icon-font-size: $global-icon-font-size;
+$topbar-dropdown-submenu-active-background: $primary-color-material-800;
+$topbar-dropdown-menu-active-background: $primary-color-material-700;
+$hide-topbar-down-arrow: true;
+$topbar-dropdown-menu-card-level: 2;

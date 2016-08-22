@@ -1,0 +1,238 @@
+//	1. Global Overrides
+//	1.1 Global Addons
+//   2. Breakpoints
+//   3. The Grid
+//   4. Base Typography
+//   5. Typography Helpers
+//   6. Abide
+//   7. Accordion
+//   8. Accordion Menu
+//   9. Badge
+//  10. Breadcrumbs
+//  11. Button
+//  12. Button Group
+//  13. Callout
+//  14. Close Button
+//  15. Drilldown
+//  16. Dropdown
+//  17. Dropdown Menu
+//  18. Flex Video
+//  19. Forms
+//  20. Label
+//  21. Media Object
+//  22. Menu
+//  23. Off-canvas
+//  24. Orbit
+//  25. Pagination
+//  26. Progress Bar
+//  27. Reveal
+//  28. Slider
+//  29. Switch
+//  30. Table
+//  31. Tabs
+//  32. Thumbnail
+//  33. Tooltip
+//  34. Top Bar
+
+// 1. Global
+@mixin card-border{
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+@mixin transition-to-dark{
+	  	-webkit-transition: $input-transition;
+	  	-moz-transition: $input-transition;
+	  	-ms-transition: $input-transition;
+	  	-o-transition: $input-transition;
+}
+
+@mixin transition($property: all, $duration: $transition-duration-fast, $delay: 0ms, $timing-function: ease){
+	-webkit-transition: $property $duration $timing-function;
+	-moz-transition: $property $duration $timing-function;
+	-ms-transition: $property $duration $timing-function;
+	-o-transition: $property $duration $timing-function;
+}
+
+@mixin card-shadow($level){
+	@if $level == 1{
+		-webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.34);
+		-moz-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.34);
+		box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.34);
+	}
+	@elseif $level == 2{
+		-webkit-box-shadow: 0px 4px 8px -1px rgba(0,0,0,.34);
+		-moz-box-shadow: 0px 4px 8px -1px rgba(0,0,0,.34);
+		box-shadow: 0px 4px 8px -1px rgba(0,0,0,.34);
+	}
+	@elseif $level == 3{
+		-webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.34);
+		-moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.34);
+		box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.34);
+	}
+}
+
+@mixin card($level, $border, $bg-color: inherit){
+	@if $border {
+		@include card-border;
+	}
+	background-color: $bg-color;
+	@include card-shadow($level);
+}
+
+@mixin nexus-global{
+	@font-face{
+		font-family: Roboto;
+		src: url("/assets/vendor/Roboto/Roboto-Regular.ttf")
+	}
+
+	@font-face{
+		font-family: Ubuntu;
+		src: url("/assets/vendor/Ubuntu/Ubuntu-Regular.ttf")
+	}
+
+	.clear-bg{
+		background-color: rgba(0,0,0,0);
+	}
+
+	body{
+		letter-spacing: $body-font-spacing;
+	}
+
+	.fade-in{
+		@include mui-fade(in, 0, 1, $duration: $fade-in-duration);
+	}
+	.fade-out{
+		@include mui-fade(out, 1, 0, $duration: $fade-out-duration);
+	}
+
+	.content{
+		min-height: $content-height;
+		background-color: $content-background-color;
+	}
+
+	.menu-text{
+		padding: 0px;
+	}
+}
+
+
+// 17. DropdownMenu
+@mixin nexus-dropdown-menu{
+	
+	.dropdown.menu{
+		li{
+		@include transition();
+		}
+		li a:hover, li.has-submenu.is-active a{
+			background-color: $topbar-dropdown-menu-active-background;
+		}
+		li.has-submenu.is-active{
+			@include card($level: $topbar-dropdown-menu-card-level, $border: false);
+			ul.menu{
+				@include card($level: $topbar-dropdown-menu-card-level, $border: false);
+				
+				li:hover>a, li.is-active>a{
+					background-color: $topbar-dropdown-submenu-active-background;
+				}
+			}
+		}
+	}
+}
+
+// 19. Forms
+
+@mixin nexus-forms{
+	
+	.input-text-wrapper{
+		display: table-cell;
+		&:after{
+			display:block;
+			content: ' ';
+			border-bottom: solid 2px $primary-color-material-800;  
+			transform: scaleX(0.0001);  
+			transition: transform 250ms ease-in-out;
+		}
+		&:hover:after{
+			transform: scaleX(1);
+		}
+		&:focus:after{
+			transform: scaleX(1);
+		}
+
+		input[type="text"]{
+			&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			    color:    $primary-color-material-800;
+			    opacity: 1;
+			}
+			&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color:    $primary-color-material-800;
+			   opacity:  1;
+			}
+			&::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color:    $primary-color-material-800;
+			   opacity:  1;
+			}
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color:    $primary-color-material-800;
+			   opacity: 1;
+			}
+
+			&:focus{
+				border:0;
+			}
+		}
+	}
+}
+
+// 22. Menu
+
+// 23. Off Canvas
+@mixin nexus-off-canvas{
+	.#{$maincontent-class}{
+		min-height: $content-height;
+	}
+}
+
+// 34. Top Bar
+@mixin nexus-top-bar{
+	.top-bar{
+		@include card($level: 1, $border: false, $bg-color: $topbar-background);
+		position: relative;
+		font-size: $topbar-font-size;
+
+		.menu{
+			i{
+				font-size: $topbar-icon-font-size;
+			}
+			li{
+				a{
+					padding: 1rem;
+				}
+				form{
+					display: table;
+					& > * {
+						display: table-cell;
+					}
+					input{
+						height: 1.5rem;
+						margin: 0 auto;		
+					}
+				}					
+			}
+			&.dropdown .has-submenu.is-down-arrow > a{
+				padding-right: .8rem;
+
+				&::after{
+					@if $hide-topbar-down-arrow {
+						display: none;
+					}
+					top: 18px;
+					right: 0px;
+				}
+			}
+		}
+
+	}
+}
